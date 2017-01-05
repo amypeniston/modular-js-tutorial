@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Modular JS Tutorial</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="row">
+      <div class="column small-12 medium-6 small-centered">
+        <h1 class="text-center">People Adder</h1>
+        <div id="statsModule">
+          <script id="stats-template" type="text/template">
+              <h2>Stats</h2>
+              <p># of People: {{people}}</p>
+          </script>
+        </div>
+        <div id="peopleModule">
+          <h2>People</h2>
+          <input type="text" placeholder="Name">
+          <button class="button" id="addPerson">Add Person</button>
+          <ul id="people">
+            <script id="people-template" type="text/template">
+              {{#people}}
+                <li>
+                  <span>{{.}}</span>
+                  <i class="del">X</i>
+                </li>
+              {{/people}}
+            </script>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/oj.mustache/0.7.2/oj.mustache.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
+  <script src="scripts/pubsub.js"></script>
+  <script src="scripts/stats.js"></script>
+  <script src="scripts/people.js"></script>
+  </body>
+</html>

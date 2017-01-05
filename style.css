@@ -1,0 +1,26 @@
+#people {
+  list-style-type: none;
+  margin: 0;
+}
+
+#people li {
+  background: #eee;
+  padding: 10px
+}
+
+#people li + li {
+  margin-top: 1rem;
+}
+
+i.del {
+  float: right;
+  font-style: normal;
+  background: #222;
+  color: #fff;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
